@@ -1,0 +1,30 @@
+body {
+  background-color: #ff6663;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;        /* ensures centering works even when content is short */
+  margin: 0;                /* removes default body margin */
+  font-family: sans-serif;  /* optional: improves readability */
+}
+
+button {
+  background-color: #fefffe;
+  border: none;
+  padding: 8px 16px;        /* slightly larger for better touch targets */
+  font-size: 18px;
+  border-radius: 8px;       /* slightly more modern */
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, transform 0.1s ease; /* specifies properties to transition */
+  font-weight: 500;         /* optional: makes text slightly bolder */
+}
+
+button:hover {
+  background-color: #D5D5D5;
+}
+
+button:focus {
+  outline: 1px solid #2c7da0; /* adds accessibility focus ring */
+  outline-offset: 1px;
+}
+
