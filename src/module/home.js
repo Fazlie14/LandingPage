@@ -11,8 +11,7 @@ class Home {
  
   home() {
     // Clear previous content (optional)
-  
-
+    this.content.innerHTML = "";
     const div = document.createElement('div');
     div.className = 'home-page';
 
