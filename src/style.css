@@ -10,6 +10,10 @@ body {
   box-sizing: border-box;  /* optional: improves readability */
 }
 
+header{
+  margin-top: 20px;
+}
+
 button {
   background-color: #fefffe;
   border: none;
@@ -29,7 +33,9 @@ button:focus {
   outline: 1px solid #2c7da0; /* adds accessibility focus ring */
   outline-offset: 1px;
 }
-
+#content{
+  padding: 10px 10px;
+}
 
 
 /* Home page container */
@@ -124,5 +130,123 @@ button:focus {
 .hours p:first-child {
   font-weight: 600;
 }
+
+
+/* Menu page container */
+      .menu-page {
+        max-width: 72rem;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+        font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+      }
+
+      .menu-page h1 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        text-align: center;
+        color: #ffffff;
+        margin-bottom: 1rem;
+      }
+
+      .menu-subtitle {
+        text-align: center;
+        color: #24282c;
+        margin-bottom: 2rem;
+        font-size: 1.1rem;
+      }
+
+      /* Category sections */
+      .menu-category {
+        margin-bottom: 3rem;
+      }
+
+      .menu-category h2 {
+        font-size: 1.8rem;
+        font-weight: 600;
+        border-left: 4px solid #ff6663;
+        padding-left: 1rem;
+        margin-bottom: 1.5rem;
+        color: #1f2937;
+      }
+
+      /* Grid for items */
+      .menu-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1.5rem;
+      }
+
+      /* Card style */
+      .menu-card {
+        background: white;
+        border-radius: 1rem;
+        box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+        overflow: hidden;
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+      .menu-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+      }
+
+      .card-content {
+        padding: 1rem;
+      }
+
+      .card-header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0.5rem;
+        flex-direction: column;
+      }
+      .card-header img{
+        width: 250px;
+        height:auto;
+        margin-top: 10px;
+        border-radius:10px ;
+
+      }
+
+      .item-name {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #1f2937;
+      }
+
+      .item-price {
+        font-weight: 600;
+        color: #ff6663;
+      }
+
+      .item-description {
+        color: #6b7280;
+        font-size: 0.875rem;
+        margin-bottom: 0.75rem;
+        line-height: 1.4;
+      }
+
+      .item-icon {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.25rem;
+        font-size: 0.75rem;
+        color: #9ca3af;
+        margin-top: 0.5rem;
+      }
+
+      .item-icon i {
+        font-size: 0.875rem;
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 640px) {
+        .menu-page h1 {
+          font-size: 2rem;
+        }
+        .menu-category h2 {
+          font-size: 1.5rem;
+        }
+      }
 
 

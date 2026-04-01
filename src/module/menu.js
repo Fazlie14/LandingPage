@@ -1,3 +1,18 @@
+import BruschettaClassica from "../image/Bruschetta_Classica.jpg"
+import Calamari_Fritti from "../image/Calamari_Fritti.jpg"
+import Caprese_Salad from "../image/Caprese_Salad.jpg"
+import Risotto_ai_Funghi from "../image/Risotto_ai_Funghi.jpg"
+import Grilled_Sea_Bass from "../image/Grilled_Sea_Bass.jpg"
+import Picanha_Steak from "../image/Picanha_Steak.jpg"
+import Vegetarian_Pasta from "../image/Vegetarian_Pasta.jpg"
+import Tiramisù from "../image/Tiramisù.jpg"
+import Panna_Cotta from "../image/Panna_Cotta.jpg"
+import House_Red_Wine from "../image/House_Red_Wine.jpg"
+import Signature_Cocktail from "../image/Signature_Cocktail.jpg"
+
+
+
+
 class Menu {
   constructor() {
     this.content = document.querySelector("#content");
@@ -29,27 +44,27 @@ class Menu {
       {
         category: "Starters",
         items: [
-          { name: "Bruschetta Classica", price: "€8", description: "Toasted bread with fresh tomatoes, garlic, basil, and extra virgin olive oil.", icon: "fa-bread-slice" },
-          { name: "Calamari Fritti", price: "€12", description: "Lightly fried squid served with lemon aioli.", icon: "fa-fish" },
-          { name: "Caprese Salad", price: "€9", description: "Buffalo mozzarella, heirloom tomatoes, basil, and balsamic glaze.", icon: "fa-salad" }
+          { name: "Bruschetta Classica",image:BruschettaClassica,  price: "€8", description: "Toasted bread with fresh tomatoes, garlic, basil, and extra virgin olive oil.", icon: "fa-bread-slice" },
+          { name: "Calamari Fritti",image:Calamari_Fritti, price: "€12", description: "Lightly fried squid served with lemon aioli.", icon: "fa-fish" },
+          { name: "Caprese Salad",image:Caprese_Salad, price: "€9", description: "Buffalo mozzarella, heirloom tomatoes, basil, and balsamic glaze.", icon: "fa-salad" }
         ]
       },
       {
         category: "Main Courses",
         items: [
-          { name: "Risotto ai Funghi", price: "€16", description: "Creamy arborio rice with wild mushrooms and truffle oil.", icon: "fa-mushroom" },
-          { name: "Grilled Sea Bass", price: "€22", description: "Fresh sea bass fillet with lemon butter sauce and seasonal vegetables.", icon: "fa-fish" },
-          { name: "Picanha Steak", price: "€24", description: "Grilled Brazilian picanha served with chimichurri and crispy potatoes.", icon: "fa-drumstick-bite" },
-          { name: "Vegetarian Pasta", price: "€14", description: "Penne with roasted vegetables, pesto, and parmesan shavings.", icon: "fa-leaf" }
+          { name: "Risotto ai Funghi",image:Risotto_ai_Funghi, price: "€16", description: "Creamy arborio rice with wild mushrooms and truffle oil.", icon: "fa-mushroom" },
+          { name: "Grilled Sea Bass",image:Grilled_Sea_Bass, price: "€22", description: "Fresh sea bass fillet with lemon butter sauce and seasonal vegetables.", icon: "fa-fish" },
+          { name: "Picanha Steak",image:Picanha_Steak, price: "€24", description: "Grilled Brazilian picanha served with chimichurri and crispy potatoes.", icon: "fa-drumstick-bite" },
+          { name: "Vegetarian Pasta",image:Vegetarian_Pasta,price: "€14", description: "Penne with roasted vegetables, pesto, and parmesan shavings.", icon: "fa-leaf" }
         ]
       },
       {
         category: "Desserts & Drinks",
         items: [
-          { name: "Tiramisù", price: "€6", description: "Classic Italian dessert with mascarpone and espresso.", icon: "fa-mug-hot" },
-          { name: "Panna Cotta", price: "€5", description: "Vanilla panna cotta with berry coulis.", icon: "fa-ice-cream" },
-          { name: "House Red Wine", price: "€4/glass", description: "Smooth, full‑bodied red from the Douro region.", icon: "fa-wine-glass-alt" },
-          { name: "Signature Cocktail", price: "€9", description: "Quero’s special blend of rum, passion fruit, and lime.", icon: "fa-cocktail" }
+          { name: "Tiramisù",image:Tiramisù, price: "€6", description: "Classic Italian dessert with mascarpone and espresso.", icon: "fa-mug-hot" },
+          { name: "Panna Cotta",image:Panna_Cotta, price: "€5", description: "Vanilla panna cotta with berry coulis.", icon: "fa-ice-cream" },
+          { name: "House Red Wine",image:House_Red_Wine, price: "€4/glass", description: "Smooth, full‑bodied red from the Douro region.", icon: "fa-wine-glass-alt" },
+          { name: "Signature Cocktail",image:Signature_Cocktail, price: "€9", description: "Quero’s special blend of rum, passion fruit, and lime.", icon: "fa-cocktail" }
         ]
       }
     ];
@@ -80,11 +95,18 @@ class Menu {
         nameSpan.className = "item-name";
         nameSpan.textContent = item.name;
 
+        const image = document.createElement("img");
+        image.src = item.image;
+        image.alt = "Bruschetta Classica"
+        image.className = "card-header"
+
+
         const priceSpan = document.createElement("span");
         priceSpan.className = "item-price";
         priceSpan.textContent = item.price;
 
         header.appendChild(nameSpan);
+        header.appendChild(image);
         header.appendChild(priceSpan);
 
         const desc = document.createElement("p");
